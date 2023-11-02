@@ -29,5 +29,10 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Pre deploy
+        run: |
+          echo "${{secrets.SSH_PRIVATE_KEY}}"
+          cat ~/.ssh/id_rsa
+
       - name: Deploy
         run: npm run deploy -- -r git@github.com:lcd-cloud-2
