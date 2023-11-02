@@ -32,7 +32,7 @@ jobs:
       - name: Pre deploy
         run: |
           cat ~/.ssh/id_rsa
-          ls ~/.ssh
+          ls -a -l ~/.ssh
 
       - name: Deploy
         run: npm run deploy -- -r git@github.com:lcd-cloud-2
